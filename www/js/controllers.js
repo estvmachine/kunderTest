@@ -116,9 +116,13 @@ angular.module('starter.controllers', [])
 
     $scope.clearFabs = function() {
         var fabs = document.getElementsByClassName('button-fab');
-        if (fabs.length && fabs.length > 1) {
-            fabs[0].remove();
+        if(typeof fabs !== 'undefined'){
+          if (fabs.length > 0) {
+              fabs[0].remove();
+          }
         }
+        
+        
     };
 })
 

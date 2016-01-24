@@ -1,6 +1,6 @@
 angular.module('starter.controllers')
 
-.controller('SearchCtlr', function($scope, $ionicModal, $http , $timeout, ionicMaterialInk, ionicMaterialMotion) {
+.controller('SearchCtlr', function($rootScope,$scope, $ionicModal, $http , $timeout, ionicMaterialInk, ionicMaterialMotion) {
 
      $scope.$parent.showHeader();
     $scope.$parent.clearFabs();
@@ -10,6 +10,14 @@ angular.module('starter.controllers')
             selector: '.animate-fade-slide-in .item'
         });
     }, 200);
+
+  $rootScope.$on('$stateChangeStart', 
+    function(event, toState, toParams, fromState, fromParams){ 
+
+        if(toState.name=='app.search'){
+          $scope.$parent.clearFabs();      
+        }
+  })
 
   $scope.$watch('search',function(newVal, oldVal){
 

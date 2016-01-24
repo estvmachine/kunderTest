@@ -5,9 +5,6 @@ angular.module('starter.controllers')
   playlistService ) {
 
     $scope.$parent.showHeader();
-    $scope.$parent.clearFabs();
-    $scope.isExpanded = true;
-    $scope.$parent.setExpanded(true);
     $scope.$parent.setHeaderFab('right');
 
     $timeout(function() {

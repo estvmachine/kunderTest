@@ -7,7 +7,7 @@
 		    <p>{{film.Released}}</p>
 		  </div>
 		  <div class="item item-body">
-		    <img ng-src="{{film.Poster}}">
+		    <img ng-src="{{film.Poster | http2https}}">
 		    <p ng-bind="film.Plot"></p>
 		     <p>
 		      <a class="subdued">{{film.imdbRating}}</a>

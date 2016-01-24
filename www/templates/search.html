@@ -12,7 +12,7 @@
 	<div class="list">
 
 	    <a class="item item-thumbnail-left" ui-sref="app.single({filmId: film.imdbID})" ng-repeat="film in filmsFound">
-	      <img ng-src="{{film.Poster}}">
+	      <img ng-src="{{film.Poster | http2https}}">
 	      <h2 ng-bind="film.Title"></h2>
 	      <p>{{(film.Year)}}</p>
 	    </a>

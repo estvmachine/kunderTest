@@ -11,7 +11,7 @@
 
 	<div class="list">
 
-	    <a class="item item-thumbnail-left" ui-sref="app.single({playlistId: film.imdbID})" ng-repeat="film in filmsFound">
+	    <a class="item item-thumbnail-left" ui-sref="app.single({filmId: film.imdbID})" ng-repeat="film in filmsFound">
 	      <img ng-src="{{film.Poster}}">
 	      <h2 ng-bind="film.Title"></h2>
 	      <p>{{(film.Year)}}</p>

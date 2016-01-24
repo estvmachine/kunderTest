@@ -1,6 +1,7 @@
 angular.module('starter.controllers')
 
-.controller('FilmDetailCtlr', function($scope, $ionicModal, $http, $stateParams, $timeout, ionicMaterialInk, ionicMaterialMotion) {
+.controller('FilmDetailCtlr', function($scope, $ionicModal, $http, $stateParams, $timeout, ionicMaterialInk, ionicMaterialMotion,
+  playlistService) {
 
     $scope.$parent.showHeader();
     $scope.$parent.clearFabs();
@@ -19,7 +20,11 @@ angular.module('starter.controllers')
 
 
   $scope.initPage= function(){
-    searchFilmForId($stateParams.playlistId);
+    searchFilmForId($stateParams.filmId);
+  }
+
+  $scope.addPlaylist= function(){
+    playlistService.add($stateParams.filmId);
   }
 
   var searchFilmForId= function(id){

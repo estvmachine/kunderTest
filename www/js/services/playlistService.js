@@ -7,7 +7,7 @@ angular.module('starter')
 	 _this.listFilms= [];
 
 	 _this.add = function(id){
-	 	if(_this.indexFilms.indexOf(id) != -1){
+	 	if(_this.indexFilms.indexOf(id) == -1){
 	 		_this.indexFilms.push(id);
 	 		_this.listFilms.push({id:id,
 	 							order: _this.indexFilms.length

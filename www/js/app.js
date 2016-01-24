@@ -86,10 +86,10 @@ angular.module('starter', ['ionic', 'ionic-material' , 'starter.controllers'])
     })
 
   .state('app.single', {
-    url: '/playlists/:playlistId',
+    url: '/playlists/:filmId',
     views: {
       'menuContent': {
-        templateUrl: 'templates/playlist.html'
+        templateUrl: 'templates/filmDetail.html'
         },
         'fabContent': {
             template: '<button id="fab-film-single" ng-click="addFavorites()" class="button button-fab button-fab-top-right expanded button-energized-900 spin"><i class="icon ion-heart"></i></button>',
@@ -99,7 +99,7 @@ angular.module('starter', ['ionic', 'ionic-material' , 'starter.controllers'])
                   }, 900);
 
                   $scope.addFavorites= function(){
-                    favoritesService.add($stateParams.playlistId)
+                    favoritesService.add($stateParams.filmId)
                   }
             }
         }

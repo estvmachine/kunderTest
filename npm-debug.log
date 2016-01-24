@@ -1,0 +1,96 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'c:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'c:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'readable-stream/transform' ]
+2 info using npm@2.14.7
+3 info using node@v4.2.2
+4 verbose install initial load of c:\Program Files\nodejs\package.json
+5 verbose readDependencies loading dependencies from c:\Program Files\nodejs\package.json
+6 silly cache add args [ 'readable-stream/transform', null ]
+7 verbose cache add spec readable-stream/transform
+8 silly cache add parsed spec Result {
+8 silly cache add   raw: 'readable-stream/transform',
+8 silly cache add   scope: null,
+8 silly cache add   name: null,
+8 silly cache add   rawSpec: 'readable-stream/transform',
+8 silly cache add   spec: 'github:readable-stream/transform',
+8 silly cache add   type: 'hosted',
+8 silly cache add   hosted:
+8 silly cache add    { type: 'github',
+8 silly cache add      ssh: 'git@github.com:readable-stream/transform.git',
+8 silly cache add      sshUrl: 'git+ssh://git@github.com/readable-stream/transform.git',
+8 silly cache add      httpsUrl: 'git+https://github.com/readable-stream/transform.git',
+8 silly cache add      gitUrl: 'git://github.com/readable-stream/transform.git',
+8 silly cache add      shortcut: 'github:readable-stream/transform',
+8 silly cache add      directUrl: 'https://raw.githubusercontent.com/readable-stream/transform/master/package.json' } }
+9 verbose addRemoteGit caching readable-stream/transform
+10 verbose addRemoteGit readable-stream/transform is a repository hosted by github
+11 silly tryGitProto attempting to clone git://github.com/readable-stream/transform.git
+12 silly tryClone cloning readable-stream/transform via git://github.com/readable-stream/transform.git
+13 verbose tryClone git-github-com-readable-stream-transform-git-37bea52f not in flight; caching
+14 verbose makeDirectory C:\Users\Esteban\AppData\Roaming\npm-cache\_git-remotes creation not in flight; initializing
+15 verbose makeCacheDir UID & GID are irrelevant on win32
+16 info git [ 'clone',
+16 info git   '--template=C:\\Users\\Esteban\\AppData\\Roaming\\npm-cache\\_git-remotes\\_templates',
+16 info git   '--mirror',
+16 info git   'git://github.com/readable-stream/transform.git',
+16 info git   'C:\\Users\\Esteban\\AppData\\Roaming\\npm-cache\\_git-remotes\\git-github-com-readable-stream-transform-git-37bea52f' ]
+17 verbose git clone --template=C:\Users\Esteban\AppData\Roaming\npm-cache\_git-remotes\_templates --mirror git://github.com/readable-stream/transform.git C:\Users\Esteban\AppData\Roaming\npm-cache\_git-remotes\git-github-com-readable-stream-transform-git-37bea52f: Cloning into bare repository 'C:\Users\Esteban\AppData\Roaming\npm-cache\_git-remotes\git-github-com-readable-stream-transform-git-37bea52f'...
+17 verbose git clone --template=C:\Users\Esteban\AppData\Roaming\npm-cache\_git-remotes\_templates --mirror git://github.com/readable-stream/transform.git C:\Users\Esteban\AppData\Roaming\npm-cache\_git-remotes\git-github-com-readable-stream-transform-git-37bea52f: fatal: remote error:
+17 verbose git clone --template=C:\Users\Esteban\AppData\Roaming\npm-cache\_git-remotes\_templates --mirror git://github.com/readable-stream/transform.git C:\Users\Esteban\AppData\Roaming\npm-cache\_git-remotes\git-github-com-readable-stream-transform-git-37bea52f:   Repository not found.
+18 silly tryHTTPS attempting to clone git+https://github.com/readable-stream/transform.git
+19 silly tryClone cloning readable-stream/transform via git+https://github.com/readable-stream/transform.git
+20 verbose tryClone https-github-com-readable-stream-transform-git-54d90bfe not in flight; caching
+21 info git [ 'clone',
+21 info git   '--template=C:\\Users\\Esteban\\AppData\\Roaming\\npm-cache\\_git-remotes\\_templates',
+21 info git   '--mirror',
+21 info git   'https://github.com/readable-stream/transform.git',
+21 info git   'C:\\Users\\Esteban\\AppData\\Roaming\\npm-cache\\_git-remotes\\https-github-com-readable-stream-transform-git-54d90bfe' ]
+22 verbose git clone --template=C:\Users\Esteban\AppData\Roaming\npm-cache\_git-remotes\_templates --mirror https://github.com/readable-stream/transform.git C:\Users\Esteban\AppData\Roaming\npm-cache\_git-remotes\https-github-com-readable-stream-transform-git-54d90bfe: Cloning into bare repository 'C:\Users\Esteban\AppData\Roaming\npm-cache\_git-remotes\https-github-com-readable-stream-transform-git-54d90bfe'...
+22 verbose git clone --template=C:\Users\Esteban\AppData\Roaming\npm-cache\_git-remotes\_templates --mirror https://github.com/readable-stream/transform.git C:\Users\Esteban\AppData\Roaming\npm-cache\_git-remotes\https-github-com-readable-stream-transform-git-54d90bfe: remote: Invalid username or password.
+22 verbose git clone --template=C:\Users\Esteban\AppData\Roaming\npm-cache\_git-remotes\_templates --mirror https://github.com/readable-stream/transform.git C:\Users\Esteban\AppData\Roaming\npm-cache\_git-remotes\https-github-com-readable-stream-transform-git-54d90bfe: fatal: Authentication failed for 'https://github.com/readable-stream/transform.git/'
+23 silly trySSH attempting to clone git@github.com:readable-stream/transform.git
+24 silly tryClone cloning readable-stream/transform via git@github.com:readable-stream/transform.git
+25 verbose tryClone git-github-com-readable-stream-transform-git-934c353e not in flight; caching
+26 info git [ 'clone',
+26 info git   '--template=C:\\Users\\Esteban\\AppData\\Roaming\\npm-cache\\_git-remotes\\_templates',
+26 info git   '--mirror',
+26 info git   'git@github.com:readable-stream/transform.git',
+26 info git   'C:\\Users\\Esteban\\AppData\\Roaming\\npm-cache\\_git-remotes\\git-github-com-readable-stream-transform-git-934c353e' ]
+27 error git clone --template=C:\Users\Esteban\AppData\Roaming\npm-cache\_git-remotes\_templates --mirror git@github.com:readable-stream/transform.git C:\Users\Esteban\AppData\Roaming\npm-cache\_git-remotes\git-github-com-readable-stream-transform-git-934c353e: Cloning into bare repository 'C:\Users\Esteban\AppData\Roaming\npm-cache\_git-remotes\git-github-com-readable-stream-transform-git-934c353e'...
+27 error git clone --template=C:\Users\Esteban\AppData\Roaming\npm-cache\_git-remotes\_templates --mirror git@github.com:readable-stream/transform.git C:\Users\Esteban\AppData\Roaming\npm-cache\_git-remotes\git-github-com-readable-stream-transform-git-934c353e: ERROR: Repository not found.
+27 error git clone --template=C:\Users\Esteban\AppData\Roaming\npm-cache\_git-remotes\_templates --mirror git@github.com:readable-stream/transform.git C:\Users\Esteban\AppData\Roaming\npm-cache\_git-remotes\git-github-com-readable-stream-transform-git-934c353e: fatal: Could not read from remote repository.
+27 error git clone --template=C:\Users\Esteban\AppData\Roaming\npm-cache\_git-remotes\_templates --mirror git@github.com:readable-stream/transform.git C:\Users\Esteban\AppData\Roaming\npm-cache\_git-remotes\git-github-com-readable-stream-transform-git-934c353e:
+27 error git clone --template=C:\Users\Esteban\AppData\Roaming\npm-cache\_git-remotes\_templates --mirror git@github.com:readable-stream/transform.git C:\Users\Esteban\AppData\Roaming\npm-cache\_git-remotes\git-github-com-readable-stream-transform-git-934c353e: Please make sure you have the correct access rights
+27 error git clone --template=C:\Users\Esteban\AppData\Roaming\npm-cache\_git-remotes\_templates --mirror git@github.com:readable-stream/transform.git C:\Users\Esteban\AppData\Roaming\npm-cache\_git-remotes\git-github-com-readable-stream-transform-git-934c353e: and the repository exists.
+28 verbose stack Error: Command failed: git -c core.longpaths=true clone --template=C:\Users\Esteban\AppData\Roaming\npm-cache\_git-remotes\_templates --mirror git@github.com:readable-stream/transform.git C:\Users\Esteban\AppData\Roaming\npm-cache\_git-remotes\git-github-com-readable-stream-transform-git-934c353e
+28 verbose stack Cloning into bare repository 'C:\Users\Esteban\AppData\Roaming\npm-cache\_git-remotes\git-github-com-readable-stream-transform-git-934c353e'...
+28 verbose stack ERROR: Repository not found.
+28 verbose stack fatal: Could not read from remote repository.
+28 verbose stack
+28 verbose stack Please make sure you have the correct access rights
+28 verbose stack and the repository exists.
+28 verbose stack
+28 verbose stack     at ChildProcess.exithandler (child_process.js:203:12)
+28 verbose stack     at emitTwo (events.js:87:13)
+28 verbose stack     at ChildProcess.emit (events.js:172:7)
+28 verbose stack     at maybeClose (internal/child_process.js:818:16)
+28 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+29 verbose cwd c:\Users\Esteban\Proyectos\kunder
+30 error Windows_NT 6.3.9600
+31 error argv "c:\\Program Files\\nodejs\\node.exe" "c:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "-g" "readable-stream/transform"
+32 error node v4.2.2
+33 error npm  v2.14.7
+34 error code 128
+35 error Command failed: git -c core.longpaths=true clone --template=C:\Users\Esteban\AppData\Roaming\npm-cache\_git-remotes\_templates --mirror git@github.com:readable-stream/transform.git C:\Users\Esteban\AppData\Roaming\npm-cache\_git-remotes\git-github-com-readable-stream-transform-git-934c353e
+35 error Cloning into bare repository 'C:\Users\Esteban\AppData\Roaming\npm-cache\_git-remotes\git-github-com-readable-stream-transform-git-934c353e'...
+35 error ERROR: Repository not found.
+35 error fatal: Could not read from remote repository.
+35 error
+35 error Please make sure you have the correct access rights
+35 error and the repository exists.
+36 error If you need help, you may report this error at:
+36 error     <https://github.com/npm/npm/issues>
+37 verbose exit [ 1, true ]

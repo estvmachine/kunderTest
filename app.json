@@ -1,0 +1,7 @@
+{
+    "name": "Kunder Test",
+    "description": "A simple Ionic app for Heroku",
+    "repository": "https://github.com/estvmachine/kunderTest",
+    "logo": "http://www.lancashiretelegraph.co.uk/resources/images/4266549/",
+    "keywords": ["ionic", "kunder", "angular"]
+}

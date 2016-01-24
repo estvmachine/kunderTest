@@ -1,7 +1,7 @@
-<ion-view view-title="Playlist">
+<ion-view view-title="{{film.Title}}" ng-controller="FilmDetailCtlr" ng-init="initPage()">
   <ion-content>
 
-	<div class="list card" ng-controller="FilmDetailCtlr" ng-init="initPage()">
+	<div class="list card" >
 		<div class="item item-avatar">
 		    <h2>{{film.Title}}</h2>
 		    <p>{{film.Released}}</p>
@@ -19,7 +19,7 @@
      		 ng-click="addPlaylist()">
 
      </button>
-     
+
 	</div>
   </ion-content>
 </ion-view>

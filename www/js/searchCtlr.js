@@ -1,6 +1,15 @@
 angular.module('starter.controllers')
 
-.controller('SearchCtlr', function($scope, $ionicModal, $http) {
+.controller('SearchCtlr', function($scope, $ionicModal, $http , $timeout, ionicMaterialInk, ionicMaterialMotion) {
+
+     $scope.$parent.showHeader();
+    $scope.$parent.clearFabs();
+
+    $timeout(function() {
+        ionicMaterialMotion.fadeSlideIn({
+            selector: '.animate-fade-slide-in .item'
+        });
+    }, 200);
 
   $scope.$watch('search',function(newVal, oldVal){
 

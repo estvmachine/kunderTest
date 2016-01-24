@@ -59,7 +59,7 @@ angular.module('starter.controllers')
 
         var promise = $http({
             method: 'GET',
-            url: 'http://www.omdbapi.com/',
+            url: 'https://www.omdbapi.com/',
             params: {i : id}
         })
 

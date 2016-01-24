@@ -33,7 +33,7 @@ angular.module('starter.controllers')
 
     $http({
         method: 'GET',
-        url: 'http://www.omdbapi.com/',
+        url: 'https://www.omdbapi.com/',
         params: searchParams
       }).then(function successCallback(res) {
           var response= res.data;

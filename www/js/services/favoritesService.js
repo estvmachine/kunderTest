@@ -1,7 +1,7 @@
 angular.module('starter')
 
 .factory('favoritesService', function() {
-	 var _this = this;
+	 var _this= this;
 
 	 _this.indexFilms= [];
 	 _this.listFilms= [];

@@ -64,6 +64,27 @@ angular.module('starter', ['ionic', 'ionic-material' , 'starter.controllers'])
       }
     })
 
+  .state('app.favorites', {
+      url: '/favorites',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/favorites.html'
+        }, 
+        'fabContent': {
+            template: '<button id="fab-favorites" ng-click="goToSearch()" class="button button-fab button-fab-top-right expanded button-energized-900 spin"><i class="icon ion-search"></i></button>',
+             controller: function ($scope, $timeout, $state) {
+                  $timeout(function () {
+                      document.getElementById('fab-favorites').classList.toggle('on');
+                  }, 900);
+
+                  $scope.goToSearch = function(){
+                    //$state.go('app.search');
+                  }
+            }
+        }
+      }
+    })
+
   .state('app.single', {
     url: '/playlists/:playlistId',
     views: {
@@ -79,7 +100,6 @@ angular.module('starter', ['ionic', 'ionic-material' , 'starter.controllers'])
 
                   $scope.addFavorites= function(){
                     favoritesService.add($stateParams.playlistId)
-                    console.log(favoritesService);
                   }
             }
         }

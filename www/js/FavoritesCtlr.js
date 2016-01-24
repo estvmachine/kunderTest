@@ -1,8 +1,8 @@
 angular.module('starter.controllers')
 
-.controller('PlaylistsCtlr', function($rootScope, $q, $scope, $ionicModal, $http, $stateParams , $timeout,
+.controller('FavoritesCtlr', function($rootScope, $q, $scope, $ionicModal, $http, $stateParams , $timeout,
  ionicMaterialInk, ionicMaterialMotion,
-  playlistService ) {
+  favoritesService ) {
 
     $scope.$parent.showHeader();
     $scope.$parent.clearFabs();
@@ -24,14 +24,14 @@ angular.module('starter.controllers')
   $rootScope.$on('$stateChangeStart', 
     function(event, toState, toParams, fromState, fromParams){ 
 
-        if(toState.name=='app.playlists'){
-            $scope.filmsFound=loadFilms(playlistService.indexFilms);
+        if(toState.name=='app.favorites'){
+            $scope.filmsFound=loadFilms(favoritesService.indexFilms);
         }
   })
 
   //Cuando se inicia la pagina y da el caso que se inicia ya en este estado, se realiza una busqueda de las peliculas
     $scope.initPage= function(){
-     $scope.filmsFound= loadFilms(playlistService.indexFilms);
+     $scope.filmsFound= loadFilms(favoritesService.indexFilms);
   };
 
   //Cuando se detecta que la lista de peliculas esta cargada
@@ -41,14 +41,13 @@ angular.module('starter.controllers')
       newVal.then(function(values){
         values.forEach(function(film){
           //Se agrega pelicula a lista local
-          console.log(film.data);
+          //console.log(film.data);
           films.push(film.data);
         })
       })
-      $scope.filmsPlaylist=films;
+      $scope.filmsFavorites=films;
     }
   })
-
 
 
   //Busqueda asincrona de todos los ids guardados en el servicio

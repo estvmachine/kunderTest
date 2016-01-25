@@ -1,6 +1,7 @@
-<ion-view view-title="Favoritos">
+<ion-view view-title="Favoritos" ng-controller="FavoritesCtlr" ng-init="initPage()">
+<button id="fab-favorites" ng-click="goToSearch()" class="button button-fab button-fab-top-right expanded button-energized-900 spin"><i class="icon ion-search"></i></button>
   <ion-content>
-   <div class="content has-header" ng-controller="FavoritesCtlr" ng-init="initPage()">
+   <div class="content has-header">
         <div class="list">
 		    <a class="item item-thumbnail-left" ui-sref="app.single({filmId: film.imdbID})" ng-repeat="film in filmsFavorites">
 		      <img ng-src="{{film.Poster}}">

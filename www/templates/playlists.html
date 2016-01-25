@@ -1,6 +1,7 @@
-<ion-view view-title="Playlists">
+<ion-view view-title="Playlists" ng-controller="PlaylistsCtlr" ng-init="initPage()">
+<button id="fab-playlists" ng-click="goToSearch()" class="button button-fab button-fab-top-right expanded button-energized-900 spin"><i class="icon ion-search"></i></button>
   <ion-content>
-   <div class="content has-header" ng-controller="PlaylistsCtlr" ng-init="initPage()">
+   <div class="content has-header" >
         <div class="list">
 		    <a class="item item-thumbnail-left" ui-sref="app.single({filmId: film.imdbID})" ng-repeat="film in filmsPlaylist">
 		      <img ng-src="{{film.Poster }}">

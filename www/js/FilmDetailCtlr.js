@@ -1,10 +1,18 @@
 angular.module('starter.controllers')
 
 .controller('FilmDetailCtlr', function($scope, $ionicModal, $http, $stateParams, $timeout, ionicMaterialInk, ionicMaterialMotion,
-  playlistService) {
+  favoritesService, playlistService) {
 
     $scope.$parent.showHeader();
     $scope.$parent.setHeaderFab('right');
+
+    $timeout(function () {
+                      document.getElementById('fab-film-single').classList.toggle('on');
+                  }, 900);
+
+    $scope.addFavorites= function(){
+          favoritesService.add($stateParams.filmId)
+                  }
 
     $timeout(function() {
         ionicMaterialMotion.fadeSlideIn({

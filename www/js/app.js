@@ -37,10 +37,7 @@ angular.module('starter', ['ionic', 'ionic-material' , 'starter.controllers', 't
     views: {
       'menuContent': {
         templateUrl: 'templates/search.html'
-      }, 
-      'fabContent': {
-            template: ''
-        }
+      }
     }
   })
   .state('app.playlists', {
@@ -48,18 +45,6 @@ angular.module('starter', ['ionic', 'ionic-material' , 'starter.controllers', 't
       views: {
         'menuContent': {
           templateUrl: 'templates/playlists.html'
-        }, 
-        'fabContent': {
-            template: '<button id="fab-playlists" ng-click="goToSearch()" class="button button-fab button-fab-top-right expanded button-energized-900 spin"><i class="icon ion-search"></i></button>',
-             controller: function ($scope, $timeout, $state) {
-                  $timeout(function () {
-                      document.getElementById('fab-playlists').classList.toggle('on');
-                  }, 900);
-
-                  $scope.goToSearch = function(){
-                    //$state.go('app.search');
-                  }
-            }
         }
       }
     })
@@ -69,18 +54,6 @@ angular.module('starter', ['ionic', 'ionic-material' , 'starter.controllers', 't
       views: {
         'menuContent': {
           templateUrl: 'templates/favorites.html'
-        }, 
-        'fabContent': {
-            template: '<button id="fab-favorites" ng-click="goToSearch()" class="button button-fab button-fab-top-right expanded button-energized-900 spin"><i class="icon ion-search"></i></button>',
-             controller: function ($scope, $timeout, $state) {
-                  $timeout(function () {
-                      document.getElementById('fab-favorites').classList.toggle('on');
-                  }, 900);
-
-                  $scope.goToSearch = function(){
-                    //$state.go('app.search');
-                  }
-            }
         }
       }
     })
@@ -90,18 +63,6 @@ angular.module('starter', ['ionic', 'ionic-material' , 'starter.controllers', 't
     views: {
       'menuContent': {
         templateUrl: 'templates/filmDetail.html'
-        },
-        'fabContent': {
-            template: '<button id="fab-film-single" ng-click="addFavorites()" class="button button-fab button-fab-top-right expanded button-energized-900 spin"><i class="icon ion-heart"></i></button>',
-             controller: function ($scope,$timeout, $stateParams, favoritesService) {
-                  $timeout(function () {
-                      document.getElementById('fab-film-single').classList.toggle('on');
-                  }, 900);
-
-                  $scope.addFavorites= function(){
-                    favoritesService.add($stateParams.filmId)
-                  }
-            }
         }
     }
 

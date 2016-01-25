@@ -1,11 +1,20 @@
 angular.module('starter.controllers')
 
-.controller('FavoritesCtlr', function($rootScope, $q, $scope, $ionicModal, $http, $stateParams , $timeout,
+.controller('FavoritesCtlr', function($rootScope, $q, $scope, $ionicModal, $http, $state, $stateParams , $timeout,
  ionicMaterialInk, ionicMaterialMotion,
   favoritesService ) {
 
+
     $scope.$parent.showHeader();
     $scope.$parent.setHeaderFab('right');
+
+     $timeout(function () {
+                document.getElementById('fab-favorites').classList.toggle('on');
+              }, 900);
+
+    $scope.goToSearch = function(){
+        $state.go('app.search');
+    }
 
     $timeout(function() {
         ionicMaterialMotion.fadeSlideIn({

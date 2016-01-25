@@ -14,7 +14,14 @@ angular.module('starter')
 	 		                    })
 	 		toastr.success('Ha sido agregado a Lista de Reproducción');
 	 	}
-	 }
+	 };
+
+	 _this.find= function(id){
+	 	if(_this.indexFilms.indexOf(id)!= -1)
+	 		return true;
+	 	else
+	 		return false ;
+	 };
 
 	 return _this;
 });

@@ -1,6 +1,6 @@
 angular.module('starter')
 
-.factory('favoritesService', function() {
+.factory('favoritesService', function(toastr) {
 	 var _this= this;
 
 	 _this.indexFilms= [];
@@ -12,6 +12,7 @@ angular.module('starter')
 	 		_this.listFilms.push({id:id,
 	 							order: _this.indexFilms.length
 	 		                    })
+	 		toastr.success('Ha sido agregado a Favoritos');
 	 	}
 	 }
 

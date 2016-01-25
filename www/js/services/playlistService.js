@@ -1,6 +1,6 @@
 angular.module('starter')
 
-.factory('playlistService', function() {
+.factory('playlistService', function(toastr) {
 	 var _this= this;
 
 	 _this.indexFilms= [];
@@ -12,6 +12,7 @@ angular.module('starter')
 	 		_this.listFilms.push({id:id,
 	 							order: _this.indexFilms.length
 	 		                    })
+	 		toastr.success('Ha sido agregado a Lista de Reproducción');
 	 	}
 	 }
 

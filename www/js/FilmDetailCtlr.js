@@ -10,10 +10,6 @@ angular.module('starter.controllers')
                       document.getElementById('fab-film-single').classList.toggle('on');
                   }, 900);
 
-    $scope.addFavorites= function(){
-          favoritesService.add($stateParams.filmId)
-                  }
-
     $timeout(function() {
         ionicMaterialMotion.fadeSlideIn({
             selector: '.animate-fade-slide-in .item'
@@ -23,9 +19,14 @@ angular.module('starter.controllers')
     // Activate ink for controller
     ionicMaterialInk.displayEffect();
 
+  $scope.addFavorites= function(){
+      favoritesService.add($stateParams.filmId)
+    }
 
   $scope.initPage= function(){
     searchFilmForId($stateParams.filmId);
+    $scope.isInPlayList= playlistService.find($stateParams.filmId);
+    $scope.isInFavorites= favoritesService.find($stateParams.filmId);
   }
 
   $scope.addPlaylist= function(){

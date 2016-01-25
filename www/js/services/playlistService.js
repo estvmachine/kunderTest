@@ -16,11 +16,11 @@ angular.module('starter')
 	 	}
 	 };
 
-	 _this.find= function(id){
-	 	if(_this.indexFilms.indexOf(id)!= -1)
+	 _this.find = function(id){
+	 	if(_this.indexFilms.indexOf(id) == -1)
+	 		return false;
+	 	else 
 	 		return true;
-	 	else
-	 		return false ;
 	 };
 
 	 return _this;

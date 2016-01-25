@@ -14,7 +14,13 @@ angular.module('starter')
 	 		                    })
 	 		toastr.success('Ha sido agregado a Favoritos');
 	 	}
-	 }
+	 };
+	 _this.find = function(id){
+	 	if(_this.indexFilms.indexOf(id) == -1)
+	 		return false;
+	 	else 
+	 		return true;
+	 };
 
 	 return _this;
 });

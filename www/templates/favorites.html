@@ -3,7 +3,7 @@
    <div class="content has-header" ng-controller="FavoritesCtlr" ng-init="initPage()">
         <div class="list">
 		    <a class="item item-thumbnail-left" ui-sref="app.single({filmId: film.imdbID})" ng-repeat="film in filmsFavorites">
-		      <img ng-src="{{film.Poster | http2https}}">
+		      <img ng-src="{{film.Poster}}">
 		      <h2 ng-bind="film.Title"></h2>
 		      <p>{{(film.Year)}}</p>
 		    </a>

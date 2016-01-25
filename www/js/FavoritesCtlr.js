@@ -12,9 +12,6 @@ angular.module('starter.controllers')
                 document.getElementById('fab-favorites').classList.toggle('on');
               }, 900);
 
-    $scope.goToSearch = function(){
-        $state.go('app.search');
-    }
 
     $timeout(function() {
         ionicMaterialMotion.fadeSlideIn({
@@ -26,19 +23,24 @@ angular.module('starter.controllers')
     ionicMaterialInk.displayEffect();
 
 
+    $scope.goToSearch = function(){
+        $state.go('app.search');
+    }
+
+
+    //Cuando se inicia la pagina y da el caso que se inicia ya en este estado, se realiza una busqueda de las peliculas
+    $scope.initPage= function(){
+     $scope.filmsFound= loadFilms(favoritesService.indexFilms);
+  };
+
   //Cuando se detecta un cambio de estado al estado de esta pagina, se realiza una busqueda de las peliculas
   $rootScope.$on('$stateChangeStart', 
     function(event, toState, toParams, fromState, fromParams){ 
 
         if(toState.name=='app.favorites'){
-            $scope.filmsFound=loadFilms(favoritesService.indexFilms);
+            $scope.initPage();
         }
   })
-
-  //Cuando se inicia la pagina y da el caso que se inicia ya en este estado, se realiza una busqueda de las peliculas
-    $scope.initPage= function(){
-     $scope.filmsFound= loadFilms(favoritesService.indexFilms);
-  };
 
   //Cuando se detecta que la lista de peliculas esta cargada
   $scope.$watch('filmsFound', function(newVal){
